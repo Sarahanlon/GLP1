@@ -22,19 +22,19 @@ const AvoidedCostPanel = () => {
 
   return (
     <div className="mt-6">
-      <h3 className="text-md font-semibold mb-2">Estimated 1-Year Avoided Condition Costs</h3>
+      <h3 className="text-xl font-bold mb-4 text-gray-800">Avoided Condition Costs (Est. 1 Year)</h3>
       <div className="bg-white shadow rounded-lg p-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-800">
-        <div className="p-2 border rounded-md bg-gray-50">
+        <div className="p-3 border rounded-md bg-gray-50 min-h-[100px]">
           <p className="text-gray-500">Type 2 Diabetes</p>
-          <p className="font-semibold">${totalAvoided.diabetes.toLocaleString()}</p>
+          <p className="font-semibold text-lg">${totalAvoided.diabetes.toLocaleString()}</p>
         </div>
-        <div className="p-2 border rounded-md bg-gray-50">
+        <div className="p-3 border rounded-md bg-gray-50 min-h-[100px]">
           <p className="text-gray-500">Heart Disease</p>
-          <p className="font-semibold">${totalAvoided.heartDisease.toLocaleString()}</p>
+          <p className="font-semibold text-lg">${totalAvoided.heartDisease.toLocaleString()}</p>
         </div>
-        <div className="p-2 border rounded-md bg-gray-50">
+        <div className="p-3 border rounded-md bg-gray-50 min-h-[100px]">
           <p className="text-gray-500">Hypertension</p>
-          <p className="font-semibold">${totalAvoided.hypertension.toLocaleString()}</p>
+          <p className="font-semibold text-lg">${totalAvoided.hypertension.toLocaleString()}</p>
         </div>
       </div>
     </div>

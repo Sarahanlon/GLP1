@@ -41,9 +41,10 @@ const ExportButton = () => {
   return (
     <button
       onClick={handleExport}
-      className="mt-6 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+      className="mt-6 flex items-center gap-2 px-4 py-2 bg-primary text-white rounded hover:bg-primary-hover transition"
     >
-      Download PDF Summary
+      <span>📄</span>
+      <span>Download PDF Summary</span>
     </button>
   );
 };

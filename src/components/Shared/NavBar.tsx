@@ -1,16 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const NavBar = () => (
-  <nav className="bg-white shadow p-4 mb-6">
-    <div className="flex gap-6 text-sm font-medium text-gray-700">
-      <Link to="/" className="hover:text-indigo-600">Home</Link>
-      <Link to="/calculator" className="hover:text-indigo-600">Calculator</Link>
-      <Link to="/education" className="hover:text-indigo-600">Education</Link>
-      <Link to="/best-practices" className="hover:text-indigo-600">Best Practices</Link>
-      <Link to="/consulting" className="hover:text-indigo-600">Consulting</Link>
-    </div>
-  </nav>
-);
+const NavBar = () => {
+  const navClass = ({ isActive }: { isActive: boolean }) =>
+    `hover:text-primary transition font-medium ${isActive ? 'text-primary border-b-2 border-primary' : 'text-gray-700'}`;
+
+  return (
+    <nav className="bg-white shadow sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex gap-6 text-sm">
+        <NavLink to="/" className={navClass}>Home</NavLink>
+        <NavLink to="/calculator" className={navClass}>Calculator</NavLink>
+        <NavLink to="/education" className={navClass}>Education</NavLink>
+        <NavLink to="/best-practices" className={navClass}>Best Practices</NavLink>
+        <NavLink to="/consulting" className={navClass}>Consulting</NavLink>
+      </div>
+    </nav>
+  );
+};
 
 export default NavBar;
